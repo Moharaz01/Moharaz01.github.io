@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mrithik Das Raz — AI & Data Science Professional</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #08090f;
+  --bg2: #0c0e18;
+  --bg3: #10121e;
+  --card: #0f1120;
+  --border: rgba(180,190,255,0.08);
+  --border2: rgba(180,190,255,0.15);
+  --accent: #6c8fff;
+  --accent2: #a78bfa;
+  --gold: #e8c97a;
+  --teal: #4dd9c0;
+  --text: #eef0fa;
+  --muted: #7880a0;
+  --soft: #b0b8d8;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: var(--font-sans); font-size: 15px; line-height: 1.65; overflow-x: hidden; }
+body::before { content: ''; position: fixed; top: -200px; left: 50%; transform: translateX(-50%); width: 800px; height: 500px; background: radial-gradient(ellipse, rgba(108,143,255,0.06) 0%, transparent 70%); pointer-events: none; z-index: 0; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 20px 64px; background: rgba(8,9,15,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+.nav-logo { font-family: var(--font-serif); font-size: 17px; font-weight: 700; color: var(--text); }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 36px; align-items: center; }
+.nav-links a { font-size: 13px; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--text); }
+.nav-cta { padding: 9px 22px !important; background: var(--accent) !important; color: #fff !important; border-radius: 6px; font-weight: 600 !important; }
+.nav-cta:hover { opacity: 0.88; color: #fff !important; }
+
+/* HERO */
+#hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 64px 80px; position: relative; z-index: 1; }
+.hero-inner { max-width: 780px; }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border: 1px solid rgba(108,143,255,0.3); border-radius: 100px; font-size: 12px; font-weight: 500; color: var(--accent); background: rgba(108,143,255,0.07); margin-bottom: 28px; opacity: 0; animation: fadeUp 0.7s ease 0.2s forwards; }
+.hero-badge::before { content: ''; width: 7px; height: 7px; background: var(--teal); border-radius: 50%; animation: pulse 2s ease infinite; }
+.hero-headline { font-family: var(--font-serif); font-size: clamp(44px, 6.5vw, 84px); font-weight: 900; line-height: 1.05; letter-spacing: -2px; margin-bottom: 8px; opacity: 0; animation: fadeUp 0.7s ease 0.35s forwards; }
+.hero-headline em { font-style: italic; color: var(--accent); }
+.hero-sub-name { font-family: var(--font-serif); font-size: clamp(28px, 4vw, 52px); font-weight: 400; font-style: italic; color: var(--soft); line-height: 1.1; margin-bottom: 28px; opacity: 0; animation: fadeUp 0.7s ease 0.5s forwards; }
+.hero-desc { font-size: 17px; font-weight: 300; color: var(--soft); max-width: 600px; line-height: 1.8; margin-bottom: 40px; opacity: 0; animation: fadeUp 0.7s ease 0.65s forwards; }
+.hero-desc strong { color: var(--text); font-weight: 500; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 56px; opacity: 0; animation: fadeUp 0.7s ease 0.8s forwards; }
+.btn-main { padding: 14px 32px; background: var(--accent); color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 8px; transition: all 0.2s; }
+.btn-main:hover { background: #7d9fff; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(108,143,255,0.3); }
+.btn-ghost { padding: 14px 32px; background: transparent; color: var(--soft); font-size: 14px; font-weight: 500; text-decoration: none; border-radius: 8px; border: 1px solid var(--border2); transition: all 0.2s; }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+.hero-pillars { display: flex; gap: 36px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.7s ease 0.95s forwards; }
+.pillar { display: flex; flex-direction: column; gap: 4px; }
+.pillar-num { font-family: var(--font-serif); font-size: 34px; font-weight: 900; color: var(--accent); line-height: 1; }
+.pillar-label { font-size: 11px; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+.hero-right { position: absolute; right: 64px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 12px; opacity: 0; animation: fadeIn 1s ease 1.1s forwards; }
+.cert-badge { padding: 16px 20px; background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--gold); max-width: 230px; border-radius: 6px; }
+.cert-badge .ct { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
+.cert-badge .cs { font-size: 11px; color: var(--muted); }
+
+/* SECTIONS */
+section { position: relative; z-index: 1; padding: 100px 64px; }
+.section-label { font-family: var(--font-mono); font-size: 11px; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+.section-title { font-family: var(--font-serif); font-size: clamp(30px, 4vw, 52px); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin-bottom: 16px; }
+.section-lead { font-size: 16px; color: var(--soft); max-width: 620px; line-height: 1.8; margin-bottom: 52px; }
+.divider { width: 48px; height: 3px; background: linear-gradient(to right, var(--accent), var(--accent2)); border-radius: 2px; margin-bottom: 52px; }
+
+/* ABOUT */
+#about { background: var(--bg2); }
+.about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: start; }
+.about-body p { font-size: 15px; color: var(--soft); line-height: 1.85; margin-bottom: 18px; }
+.about-body p strong { color: var(--text); font-weight: 600; }
+.about-body p em { color: var(--teal); font-style: normal; font-weight: 500; }
+.value-cards { display: flex; flex-direction: column; gap: 14px; }
+.value-card { padding: 20px 22px; background: var(--bg3); border: 1px solid var(--border); border-radius: 10px; transition: border-color 0.2s; }
+.value-card:hover { border-color: var(--border2); }
+.value-card h4 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 5px; display: flex; align-items: center; gap: 8px; }
+.value-card p { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+
+/* EXPERTISE */
+#what { background: var(--bg); }
+.what-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.what-card { padding: 32px 28px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; transition: all 0.3s; position: relative; overflow: hidden; }
+.what-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(to right, var(--accent), var(--accent2)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+.what-card:hover { border-color: var(--border2); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+.what-card:hover::after { transform: scaleX(1); }
+.what-icon { font-size: 28px; margin-bottom: 16px; }
+.what-card h3 { font-family: var(--font-serif); font-size: 19px; font-weight: 700; margin-bottom: 10px; }
+.what-card p { font-size: 13.5px; color: var(--muted); line-height: 1.7; margin-bottom: 18px; }
+.what-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.wtag { font-size: 11px; font-family: var(--font-mono); color: var(--accent); background: rgba(108,143,255,0.08); border: 1px solid rgba(108,143,255,0.15); padding: 3px 9px; border-radius: 4px; }
+
+/* PROJECTS */
+#projects { background: var(--bg2); }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 22px; }
+.proj-card { background: var(--bg3); border: 1px solid var(--border); border-radius: 12px; padding: 30px; transition: all 0.3s; display: flex; flex-direction: column; }
+.proj-card:hover { border-color: rgba(108,143,255,0.25); transform: translateY(-4px); box-shadow: 0 24px 48px rgba(0,0,0,0.4); }
+.proj-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+.proj-name { font-family: var(--font-serif); font-size: 19px; font-weight: 700; color: var(--text); }
+.proj-badge { font-size: 10px; font-family: var(--font-mono); padding: 4px 10px; border-radius: 100px; white-space: nowrap; }
+.badge-live { background: rgba(77,217,192,0.1); color: var(--teal); border: 1px solid rgba(77,217,192,0.2); }
+.badge-github { background: rgba(180,190,255,0.07); color: var(--muted); border: 1px solid var(--border); }
+.proj-problem { font-size: 12px; font-family: var(--font-mono); color: var(--gold); margin-bottom: 10px; }
+.proj-desc { font-size: 13.5px; color: var(--soft); line-height: 1.7; margin-bottom: 16px; flex: 1; }
+.proj-metric { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.metric-chip { font-size: 11px; font-family: var(--font-mono); color: var(--gold); background: rgba(232,201,122,0.07); border: 1px solid rgba(232,201,122,0.18); padding: 4px 10px; border-radius: 4px; }
+.proj-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+.stack-tag { font-size: 11px; font-family: var(--font-mono); color: var(--muted); border: 1px solid var(--border); padding: 3px 8px; border-radius: 4px; }
+.proj-links { display: flex; gap: 14px; margin-top: auto; }
+.plink { font-size: 13px; font-weight: 500; text-decoration: none; color: var(--accent); transition: color 0.2s; }
+.plink:hover { color: #a0b8ff; }
+
+/* APPROACH */
+#approach { background: var(--bg); }
+.approach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.approach-text p { font-size: 15px; color: var(--soft); line-height: 1.85; margin-bottom: 18px; }
+.approach-text p strong { color: var(--text); }
+.approach-text p em { color: var(--teal); font-style: normal; }
+.principles { display: flex; flex-direction: column; gap: 16px; }
+.principle { display: flex; gap: 18px; align-items: flex-start; padding: 18px 20px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
+.principle-num { font-family: var(--font-serif); font-size: 28px; font-weight: 900; color: var(--accent); line-height: 1; min-width: 36px; opacity: 0.4; }
+.principle h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.principle p { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+
+/* SKILLS */
+#skills { background: var(--bg2); }
+.skills-outer { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.skills-group h3 { font-size: 11px; font-weight: 600; color: var(--text); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--border); font-family: var(--font-mono); }
+.skill-item { margin-bottom: 16px; }
+.skill-row { display: flex; justify-content: space-between; margin-bottom: 7px; }
+.skill-name { font-size: 13.5px; color: var(--soft); }
+.skill-val { font-size: 11px; font-family: var(--font-mono); color: var(--accent); }
+.skill-track { height: 2px; background: rgba(255,255,255,0.06); border-radius: 2px; }
+.skill-fill { height: 100%; background: linear-gradient(to right, var(--accent), var(--accent2)); width: 0; transition: width 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); border-radius: 2px; }
+.soft-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.soft-chip { padding: 8px 16px; background: var(--bg3); border: 1px solid var(--border); border-radius: 100px; font-size: 13px; color: var(--soft); transition: all 0.2s; }
+.soft-chip:hover { border-color: var(--accent); color: var(--accent); }
+.gdpr-block { margin-top: 40px; padding: 24px 28px; background: var(--bg3); border: 1px solid rgba(77,217,192,0.2); border-left: 4px solid var(--teal); border-radius: 8px; grid-column: 1 / -1; }
+.gdpr-block h4 { font-size: 14px; font-weight: 600; color: var(--teal); margin-bottom: 8px; }
+.gdpr-block p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+/* EXPERIENCE */
+#experience { background: var(--bg); }
+.exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.exp-card { padding: 28px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; transition: border-color 0.2s; }
+.exp-card:hover { border-color: var(--border2); }
+.exp-period { font-family: var(--font-mono); font-size: 11px; color: var(--accent); letter-spacing: 1px; margin-bottom: 10px; }
+.exp-role { font-family: var(--font-serif); font-size: 19px; font-weight: 700; margin-bottom: 4px; }
+.exp-org { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+.exp-desc { font-size: 13px; color: var(--soft); line-height: 1.7; }
+
+/* EDUCATION */
+#education { background: var(--bg2); }
+.edu-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.edu-card { padding: 22px; background: var(--bg3); border: 1px solid var(--border); border-radius: 10px; }
+.edu-year { font-family: var(--font-mono); font-size: 10px; color: var(--accent); letter-spacing: 1px; margin-bottom: 10px; }
+.edu-deg { font-family: var(--font-serif); font-size: 15px; font-weight: 700; line-height: 1.3; margin-bottom: 6px; }
+.edu-school { font-size: 12px; color: var(--muted); }
+
+/* CONTACT */
+#contact { background: var(--bg); text-align: center; }
+.contact-wrap { max-width: 620px; margin: 0 auto; }
+.contact-heading { font-family: var(--font-serif); font-size: clamp(32px, 4vw, 52px); font-weight: 900; letter-spacing: -1px; margin-bottom: 16px; }
+.contact-heading em { font-style: italic; color: var(--accent); }
+.contact-sub { font-size: 16px; color: var(--soft); line-height: 1.75; margin-bottom: 44px; }
+.contact-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-bottom: 36px; }
+.clink { display: flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--soft); text-decoration: none; font-size: 13.5px; font-weight: 500; transition: all 0.2s; }
+.clink:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+.avail { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--teal); padding: 8px 18px; border: 1px solid rgba(77,217,192,0.2); border-radius: 100px; background: rgba(77,217,192,0.05); }
+.avail-dot { width: 8px; height: 8px; background: var(--teal); border-radius: 50%; animation: pulse 2s ease infinite; }
+
+footer { padding: 28px 64px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+footer p { font-size: 12px; color: var(--muted); }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.d1 { transition-delay: 0.1s; } .d2 { transition-delay: 0.2s; } .d3 { transition-delay: 0.3s; }
+
+@media (max-width: 960px) {
+  nav { padding: 16px 24px; }
+  .nav-links a:not(.nav-cta) { display: none; }
+  section { padding: 70px 24px; }
+  #hero { padding: 100px 24px 60px; }
+  .hero-right { display: none; }
+  .about-grid, .approach-grid, .skills-outer, .exp-grid { grid-template-columns: 1fr; gap: 32px; }
+  .what-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .edu-row { grid-template-columns: 1fr 1fr; }
+  footer { flex-direction: column; gap: 8px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Mrithik <span>Raz</span></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#what">Expertise</a>
+    <a href="#projects">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact" class="nav-cta">Let's Talk</a>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Open to Opportunities · London, UK</div>
+    <h1 class="hero-headline">Turning Data Into<br><em>Decisions.</em></h1>
+    <p class="hero-sub-name">Mrithik Das Raz</p>
+    <p class="hero-desc">AI & Data Science professional who <strong>bridges the gap between data complexity and business clarity</strong>. I don't just build models — I understand the problems they need to solve, design systems with integrity, and communicate results that drive real decisions.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-main">View My Work</a>
+      <a href="mailto:mrithikkantidasraz001@gmail.com" class="btn-ghost">Get In Touch</a>
+    </div>
+    <div class="hero-pillars">
+      <div class="pillar"><div class="pillar-num">7</div><div class="pillar-label">Live AI Projects</div></div>
+      <div class="pillar"><div class="pillar-num">0.97</div><div class="pillar-label">Best AUC Score</div></div>
+      <div class="pillar"><div class="pillar-num">100%</div><div class="pillar-label">GDPR Compliant</div></div>
+      <div class="pillar"><div class="pillar-num">3+</div><div class="pillar-label">Years Leadership</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="cert-badge"><div class="ct">IBM Data Analytics</div><div class="cs">Professional Certificate · 2026</div></div>
+    <div class="cert-badge"><div class="ct">IBM Gen AI</div><div class="cs">Professional Certificate · In Progress</div></div>
+    <div class="cert-badge"><div class="ct">MSc Computer Science</div><div class="cs">University of Greenwich · 2024</div></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="reveal">
+    <div class="section-label">Who I Am</div>
+    <h2 class="section-title">Beyond the Models</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="about-grid">
+    <div class="about-body reveal">
+      <p>I am an <strong>AI & Data Science professional</strong> with a rare combination of technical depth and human understanding. My foundation is in data — analytics, machine learning, deep learning, and generative AI — but what defines me is how I think about the <em>why</em> behind every piece of work.</p>
+      <p>With a background spanning <strong>university lecturing, technology entrepreneurship, and senior IT leadership</strong>, I have spent years translating technical complexity into decisions that matter. I understand that the value of a model is not in its architecture — it is in the confidence it builds, the problem it solves, and the action it enables.</p>
+      <p>I approach every challenge with <strong>genuine curiosity, creative rigour, and deep passion</strong> for the field. I am not someone who applies standard templates — I ask hard questions, challenge assumptions, and design solutions that are both technically sound and genuinely fit for purpose. <em>What I deliver alone reflects what I can lead, multiply, and scale in a team.</em></p>
+      <p>I thrive in <em>new environments and evolving technologies</em>. Whether it is a new domain, an unfamiliar framework, or an emerging field — I adapt quickly, absorb deeply, and contribute from day one. I see technology as a living landscape, and I move with it with confidence and curiosity.</p>
+    </div>
+    <div class="value-cards reveal d2">
+      <div class="value-card"><h4>🎯 Purpose-Driven</h4><p>Every model I build is anchored to a real outcome — not technical complexity for its own sake. I design with the decision-maker in mind, always.</p></div>
+      <div class="value-card"><h4>🔒 Ethics & Responsibility</h4><p>I believe data professionals carry a responsibility to the people behind the data. Fairness, transparency, and GDPR compliance are not checkboxes — they are commitments built into my work by design.</p></div>
+      <div class="value-card"><h4>💡 Creativity & Innovation</h4><p>My best work emerges from the intersection of deep technical knowledge and creative problem framing. I see patterns others miss and design solutions that are both elegant and effective.</p></div>
+      <div class="value-card"><h4>🤝 Team Multiplier</h4><p>What I deliver independently signals what I bring to a team. I communicate clearly, mentor confidently, and elevate everyone around me.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="what">
+  <div class="reveal">
+    <div class="section-label">Areas of Expertise</div>
+    <h2 class="section-title">What I Do</h2>
+    <p class="section-lead">I work across the full data intelligence spectrum — from analytical insight to deployed AI systems — always with a focus on responsible, explainable, and business-aligned solutions.</p>
+  </div>
+  <div class="what-grid">
+    <div class="what-card reveal">
+      <div class="what-icon">📊</div>
+      <h3>Data Analysis & Intelligence</h3>
+      <p>Transforming raw data into clear, actionable intelligence. From exploratory analysis and dashboard design to statistical modelling and executive reporting — I make data speak in a language decision-makers understand and act on.</p>
+      <div class="what-tags"><span class="wtag">Python</span><span class="wtag">SQL</span><span class="wtag">Power BI</span><span class="wtag">Pandas</span><span class="wtag">Plotly</span></div>
+    </div>
+    <div class="what-card reveal d1">
+      <div class="what-icon">🤖</div>
+      <h3>Machine Learning & AI Systems</h3>
+      <p>Designing and deploying production-grade ML models for classification, prediction, anomaly detection, and intelligent automation. I understand both the technical architecture and the business case behind every system I build.</p>
+      <div class="what-tags"><span class="wtag">scikit-learn</span><span class="wtag">TensorFlow</span><span class="wtag">Deep Learning</span><span class="wtag">NLP</span></div>
+    </div>
+    <div class="what-card reveal d2">
+      <div class="what-icon">✨</div>
+      <h3>Generative AI & RAG</h3>
+      <p>Building intelligent systems powered by large language models — document intelligence, AI tutors, business Q&A platforms. I ground GenAI in real data while maintaining privacy, compliance, and interpretability.</p>
+      <div class="what-tags"><span class="wtag">LLMs</span><span class="wtag">RAG</span><span class="wtag">LangChain</span><span class="wtag">FAISS</span><span class="wtag">HuggingFace</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="reveal">
+    <div class="section-label">Selected Work</div>
+    <h2 class="section-title">Projects That Solve Problems</h2>
+    <p class="section-lead">Seven production-grade AI and Data Science systems — all live. Each one started with a real problem, not a dataset.</p>
+  </div>
+  <div class="projects-grid">
+
+    <div class="proj-card reveal">
+      <div class="proj-header"><div class="proj-name">BrainBox AI</div><span class="proj-badge badge-live">● Live</span></div>
+      <div class="proj-problem">Problem: Businesses and learners need intelligent, context-aware AI — not generic chatbots.</div>
+      <p class="proj-desc">Dual-mode AI platform combining a Business Intelligence analyst and an AI Tutor in a single interface. Powered by LLaMA 3.3 70B with RAG architecture for grounded, accurate, source-backed responses.</p>
+      <div class="proj-metric"><span class="metric-chip">LLaMA 3.3 70B</span><span class="metric-chip">RAG + FAISS</span></div>
+      <div class="proj-stack"><span class="stack-tag">Groq API</span><span class="stack-tag">LangChain</span><span class="stack-tag">Gradio</span><span class="stack-tag">sentence-transformers</span></div>
+      <div class="proj-links"><a href="https://huggingface.co/spaces/Moharaz/brainbox-ai" target="_blank" class="plink">↗ Live App</a><a href="https://github.com/Moharaz01/brainbox-ai" target="_blank" class="plink">↗ GitHub</a></div>
+    </div>
+
+    <div class="proj-card reveal d1">
+      <div class="proj-header"><div class="proj-name">FinSight AI</div><span class="proj-badge badge-live">● Live</span></div>
+      <div class="proj-problem">Problem: Financial market data is vast and fast-moving — without intelligent analysis, signals become noise.</div>
+      <p class="proj-desc">Bloomberg-style financial intelligence platform combining LSTM forecasting, DBSCAN anomaly detection, and K-Means market regime classification for structured, interpretable market insight.</p>
+      <div class="proj-metric"><span class="metric-chip">LSTM Forecasting</span><span class="metric-chip">Anomaly Detection</span></div>
+      <div class="proj-stack"><span class="stack-tag">TensorFlow</span><span class="stack-tag">scikit-learn</span><span class="stack-tag">yfinance</span><span class="stack-tag">Streamlit</span></div>
+      <div class="proj-links"><a href="https://finsight-moharaz.streamlit.app" target="_blank" class="plink">↗ Live App</a><a href="https://github.com/Moharaz01/finsight-ai" target="_blank" class="plink">↗ GitHub</a></div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-header"><div class="proj-name">PneumoNet AI</div><span class="proj-badge badge-live">● Live</span></div>
+      <div class="proj-problem">Problem: Pneumonia misdiagnosis causes preventable harm — AI can augment and support clinical decision-making.</div>
+      <p class="proj-desc">Deep learning chest X-ray classifier built on MobileNetV2 with Grad-CAM explainability — making AI decisions transparent and clinically interpretable. Built with responsible AI at its core.</p>
+      <div class="proj-metric"><span class="metric-chip">92.4% Accuracy</span><span class="metric-chip">0.971 AUC</span><span class="metric-chip">94.7% Sensitivity</span></div>
+      <div class="proj-stack"><span class="stack-tag">TensorFlow</span><span class="stack-tag">MobileNetV2</span><span class="stack-tag">Grad-CAM</span><span class="stack-tag">Streamlit</span></div>
+      <div class="proj-links"><a href="https://huggingface.co/spaces/Moharaz/pneumonet-ai" target="_blank" class="plink">↗ Live App</a><a href="https://github.com/Moharaz01/pneumonet-ai" target="_blank" class="plink">↗ GitHub</a></div>
+    </div>
+
+    <div class="proj-card reveal d1">
+      <div class="proj-header"><div class="proj-name">SmartDoc AI</div><span class="proj-badge badge-live">● Live</span></div>
+      <div class="proj-problem">Problem: Cloud-based document AI creates serious privacy risks for organisations handling sensitive data.</div>
+      <p class="proj-desc">100% locally-processed RAG document intelligence. GDPR Article 25 compliant by architectural design — zero data leaves the user's machine. Privacy is not a feature here; it is the foundation.</p>
+      <div class="proj-metric"><span class="metric-chip">100% Local</span><span class="metric-chip">GDPR Article 25</span></div>
+      <div class="proj-stack"><span class="stack-tag">HuggingFace</span><span class="stack-tag">FAISS</span><span class="stack-tag">LangChain</span><span class="stack-tag">RoBERTa</span></div>
+      <div class="proj-links"><a href="https://huggingface.co/spaces/Moharaz/smartdoc-ai" target="_blank" class="plink">↗ Live App</a><a href="https://github.com/Moharaz01/smartdoc-ai" target="_blank" class="plink">↗ GitHub</a></div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-header"><div class="proj-name">ChurnGuard AI</div><span class="proj-badge badge-live">● Live</span></div>
+      <div class="proj-problem">Problem: UK telecoms lose significant revenue to undetected churn — early prediction enables proactive retention.</div>
+      <p class="proj-desc">Machine learning churn prediction system for UK telecoms with 27 engineered features and StratifiedKFold cross-validation. Designed to integrate directly into real-time business retention workflows.</p>
+      <div class="proj-metric"><span class="metric-chip">AUC-ROC 0.89</span><span class="metric-chip">27 Features</span></div>
+      <div class="proj-stack"><span class="stack-tag">Python</span><span class="stack-tag">scikit-learn</span><span class="stack-tag">Random Forest</span><span class="stack-tag">Streamlit</span></div>
+      <div class="proj-links"><a href="https://churnguard-moharaz.streamlit.app" target="_blank" class="plink">↗ Live App</a><a href="https://github.com/Moharaz01/churnguard-ai" target="_blank" class="plink">↗ GitHub</a></div>
+    </div>
+
+    <div class="proj-card reveal d1">
+      <div class="proj-header"><div class="proj-name">British Airways Analytics</div><span class="proj-badge badge-github">GitHub</span></div>
+      <div class="proj-problem">Problem: Airlines generate vast operational data — strategic value requires end-to-end analytical capability across multiple disciplines.</div>
+      <p class="proj-desc">Nine professional-grade deliverables: Power BI dashboard, SQL library, risk engine, predictive models, and a complete UK GDPR compliance framework — mirroring real enterprise analytics work.</p>
+      <div class="proj-metric"><span class="metric-chip">9 Deliverables</span><span class="metric-chip">Full GDPR Framework</span></div>
+      <div class="proj-stack"><span class="stack-tag">Python</span><span class="stack-tag">SQL</span><span class="stack-tag">Power BI</span><span class="stack-tag">Excel</span></div>
+      <div class="proj-links"><a href="https://github.com/Moharaz01/british-airways-analytics" target="_blank" class="plink">↗ GitHub</a></div>
+    </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-header"><div class="proj-name">UK Scam Detector</div><span class="proj-badge badge-github">GitHub</span></div>
+      <div class="proj-problem">Problem: SMS fraud costs UK consumers millions annually — a lightweight, interpretable classifier can help protect everyday people.</div>
+      <p class="proj-desc">Naive Bayes NLP text classifier detecting SMS scam messages targeting UK users. TF-IDF unigram and bigram vectorization identifies urgency language, financial lures, and deceptive linguistic patterns.</p>
+      <div class="proj-metric"><span class="metric-chip">100% Test Accuracy</span><span class="metric-chip">TF-IDF Bigrams</span></div>
+      <div class="proj-stack"><span class="stack-tag">Python</span><span class="stack-tag">scikit-learn</span><span class="stack-tag">NLP</span><span class="stack-tag">TF-IDF</span></div>
+      <div class="proj-links"><a href="https://github.com/Moharaz01/uk-scam-message-detector" target="_blank" class="plink">↗ GitHub</a></div>
+    </div>
+
+  </div>
+</section>
+
+<section id="approach">
+  <div class="reveal">
+    <div class="section-label">How I Work</div>
+    <h2 class="section-title">My Approach</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="approach-grid">
+    <div class="approach-text reveal">
+      <p>I believe the most dangerous thing in data science is <strong>technical confidence without contextual understanding</strong>. A model that achieves 99% accuracy on the wrong problem is worse than no model at all.</p>
+      <p>My process always starts with one question: <em>what decision does this need to enable?</em> From there, I design backwards — choosing methods that are interpretable, auditable, and aligned to the people who will act on the output.</p>
+      <p>I maintain <strong>UK GDPR compliance as a design principle, not an afterthought</strong>. Data minimisation, purpose limitation, and privacy by design are embedded into everything I build — because responsible AI is not optional in 2026. It is the standard.</p>
+      <p>I am <em>genuinely adaptable across environments and technologies</em>. New industries, new tools, new team cultures — I approach change as an opportunity. My background across lecturing, entrepreneurship, and engineering means I have operated in radically different contexts and delivered effectively in all of them. That versatility is not a coincidence. It is a practised discipline.</p>
+    </div>
+    <div class="principles reveal d2">
+      <div class="principle"><div class="principle-num">01</div><div><h4>Problem First, Technology Second</h4><p>I start with the business problem — not the algorithm. The best tool is the one that solves the right problem with clarity and confidence.</p></div></div>
+      <div class="principle"><div class="principle-num">02</div><div><h4>Responsible by Design</h4><p>GDPR compliance, explainability, and fairness are architectural decisions — built in from the start, never bolted on.</p></div></div>
+      <div class="principle"><div class="principle-num">03</div><div><h4>Communicate to Decide</h4><p>Insight without communication is wasted effort. I present findings in a language that enables confident decisions at every organisational level.</p></div></div>
+      <div class="principle"><div class="principle-num">04</div><div><h4>Adapt and Accelerate</h4><p>I learn new environments, tools, and domains rapidly and deliberately. Adaptability is a professional discipline — and one of my greatest strengths.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="reveal">
+    <div class="section-label">Capabilities</div>
+    <h2 class="section-title">Skills & Tools</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="skills-outer">
+    <div class="skills-group reveal">
+      <h3>Technical Proficiency</h3>
+      <div class="skill-item"><div class="skill-row"><span class="skill-name">Data Analysis & Visualisation</span><span class="skill-val">95%</span></div><div class="skill-track"><div class="skill-fill" data-width="95"></div></div></div>
+      <div class="skill-item"><div class="skill-row"><span class="skill-name">Machine Learning (scikit-learn)</span><span class="skill-val">90%</span></div><div class="skill-track"><div class="skill-fill" data-width="90"></div></div></div>
+      <div class="skill-item"><div class="skill-row"><span class="skill-name">Generative AI & LLMs</span><span class="skill-val">88%</span></div><div class="skill-track"><div class="skill-fill" data-width="88"></div></div></div>
+      <div class="skill-item"><div class="skill-row"><span class="skill-name">Deep Learning (TensorFlow)</span><span class="skill-val">85%</span></div><div class="skill-track"><div class="skill-fill" data-width="85"></div></div></div>
+      <div class="skill-item"><div class="skill-row"><span class="skill-name">SQL & Power BI</span><span class="skill-val">82%</span></div><div class="skill-track"><div class="skill-fill" data-width="82"></div></div></div>
+      <div class="skill-item"><div class="skill-row"><span class="skill-name">NLP & RAG Pipelines</span><span class="skill-val">88%</span></div><div class="skill-track"><div class="skill-fill" data-width="88"></div></div></div>
+    </div>
+    <div class="skills-group reveal d2">
+      <h3>Professional Strengths</h3>
+      <div class="soft-chips">
+        <span class="soft-chip">Strategic Thinking</span>
+        <span class="soft-chip">Stakeholder Communication</span>
+        <span class="soft-chip">Technical Leadership</span>
+        <span class="soft-chip">University Lecturing</span>
+        <span class="soft-chip">Entrepreneurship</span>
+        <span class="soft-chip">Rapid Adaptation</span>
+        <span class="soft-chip">Creative Problem Solving</span>
+        <span class="soft-chip">Responsible AI</span>
+        <span class="soft-chip">Explainability Focus</span>
+        <span class="soft-chip">Cross-Domain Curiosity</span>
+      </div>
+    </div>
+    <div class="gdpr-block reveal">
+      <h4>🔒 UK GDPR Compliance — Built In, Not Bolted On</h4>
+      <p>Every system I design adheres to UK GDPR principles: data minimisation, purpose limitation, and privacy by design (Article 25). My British Airways capstone included a full GDPR compliance framework, and SmartDoc AI was architecturally designed to achieve zero data transmission — a practical, working implementation of Article 25. I understand that responsible data handling is not a legal obligation to manage. It is the foundation of trustworthy, durable AI.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="reveal">
+    <div class="section-label">Background</div>
+    <h2 class="section-title">Experience</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="exp-grid">
+    <div class="exp-card reveal">
+      <div class="exp-period">2017 – 2023 · DHAKA, BANGLADESH</div>
+      <div class="exp-role">Chief IT Engineer</div>
+      <div class="exp-org">Moon's Film and Media</div>
+      <p class="exp-desc">Owned end-to-end IT infrastructure — server administration, network systems, and technology strategy. Applied data-driven thinking to operational decisions, developing a deep instinct for how technology serves business outcomes rather than existing as an end in itself.</p>
+    </div>
+    <div class="exp-card reveal d1">
+      <div class="exp-period">2021 – 2023 · DHAKA, BANGLADESH</div>
+      <div class="exp-role">Contractual Lecturer, Dept. of IT</div>
+      <div class="exp-org">BRAC University</div>
+      <p class="exp-desc">Delivered Computer Science and IT lectures to undergraduate students. Designed curriculum materials and assessment frameworks — developing the rare ability to explain complex technical concepts with precision, clarity, and adaptability to audiences at every level.</p>
+    </div>
+    <div class="exp-card reveal">
+      <div class="exp-period">2012 – 2016 · DHAKA, BANGLADESH</div>
+      <div class="exp-role">Chief Founding Officer</div>
+      <div class="exp-org">KitesLab Technology Startup</div>
+      <p class="exp-desc">Co-founded and led the technology division of a startup from inception. Drove strategic direction, system architecture, and team leadership under high ambiguity — a formative experience in decision-making, innovation under constraint, and building with purpose.</p>
+    </div>
+    <div class="exp-card reveal d1">
+      <div class="exp-period">2023 – PRESENT · LONDON, UK</div>
+      <div class="exp-role">AI & Data Science Professional</div>
+      <div class="exp-org">Independent Portfolio Work</div>
+      <p class="exp-desc">Independently conceptualised, built, and deployed seven production-grade AI and Data Science systems across NLP, deep learning, RAG, financial analytics, and generative AI. Each project demonstrates initiative, technical depth, and the ability to deliver complete, usable solutions from idea to deployment.</p>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="reveal">
+    <div class="section-label">Qualifications</div>
+    <h2 class="section-title">Education & Certifications</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="edu-row">
+    <div class="edu-card reveal"><div class="edu-year">2023 – 2024 · LONDON</div><div class="edu-deg">MSc Computer Science (Network Engineering)</div><div class="edu-school">University of Greenwich</div></div>
+    <div class="edu-card reveal d1"><div class="edu-year">2017 – 2022 · DHAKA</div><div class="edu-deg">BSc Computer Science & Engineering</div><div class="edu-school">BRAC University</div></div>
+    <div class="edu-card reveal d2"><div class="edu-year">2025 – 2026 · IBM</div><div class="edu-deg">IBM Data Analytics Professional Certificate</div><div class="edu-school">Next Leap · Completing</div></div>
+    <div class="edu-card reveal d3"><div class="edu-year">IN PROGRESS · IBM</div><div class="edu-deg">IBM Gen AI Professional Certificate</div><div class="edu-school">Expected May 2026</div></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-wrap">
+    <div class="reveal">
+      <h2 class="contact-heading">Let's Build Something<br><em>Meaningful.</em></h2>
+      <p class="contact-sub">I am actively seeking Data Analyst, Junior Data Scientist, and AI/ML Engineer roles in London. If you are looking for someone who understands both the data and the decisions it needs to drive — I would love to talk.</p>
+    </div>
+    <div class="contact-row reveal">
+      <a href="mailto:mrithikkantidasraz001@gmail.com" class="clink">✉ Email Me</a>
+      <a href="https://linkedin.com/in/mdrmrithik01" target="_blank" class="clink">in LinkedIn</a>
+      <a href="https://github.com/Moharaz01" target="_blank" class="clink">⌥ GitHub</a>
+    </div>
+    <div class="reveal">
+      <div class="avail"><div class="avail-dot"></div>Available for opportunities · London, UK</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Mrithik Das Raz · London, United Kingdom</p>
+  <p>AI & Data Science Professional</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+const skillObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.querySelectorAll('.skill-fill').forEach(b => b.style.width = b.dataset.width + '%');
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('#skills').forEach(el => skillObs.observe(el));
+</script>
+</body>
+</html>

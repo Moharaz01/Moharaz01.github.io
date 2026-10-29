@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mrithik Kanti Das — AI, Generative AI & Data Science Professional</title>
-<meta name="description" content="AI, Generative AI and Data Science professional in London. 8 AI/ML projects, 7 live: RAG, LLM applications, deep learning, NLP and financial analytics. MSc Computer Science (Network Engineering), University of Greenwich.">
+<title>Mrithik Kanti Das — AI, Generative AI & Data Science · Network, Cloud & Security IT Professional</title>
+<meta name="description" content="AI, Generative AI and Data Science professional with a Network, Cloud and Security IT foundation, based in London. 8 AI/ML projects, 7 live: RAG, LLM applications, deep learning, NLP, APIs and PWAs. MSc Computer Science (Network Engineering), University of Greenwich.">
 <meta name="theme-color" content="#08090f">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Mrithik Kanti Das — AI, Generative AI & Data Science Professional">
-<meta property="og:description" content="8 AI/ML projects, 7 live: RAG, LLM applications, deep learning, NLP and financial analytics. London, UK.">
+<meta property="og:title" content="Mrithik Kanti Das — AI, Generative AI & Data Science · Network, Cloud & Security IT Professional">
+<meta property="og:description" content="8 AI/ML projects, 7 live: Generative AI, RAG, deep learning, APIs and PWAs, backed by a Network, Cloud and Security IT foundation. London, UK.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308090f'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%236c8fff' text-anchor='middle'%3EMD%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -231,10 +231,98 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   footer { flex-direction: column; gap: 8px; text-align: center; }
 }
 @media (max-width: 560px) { .ach-grid, .edu-row { grid-template-columns: 1fr; } .hero-pillars { gap: 24px; } }
+
+/* ===== REFINEMENT PASS ===== */
+#progress { position: fixed; top: 0; left: 0; height: 2px; width: 0; z-index: 200; background: linear-gradient(to right, var(--accent), var(--accent2), var(--teal)); }
+nav { transition: padding 0.3s, background 0.3s; }
+nav.scrolled { padding-top: 14px; padding-bottom: 14px; background: rgba(8,9,15,0.97); box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+.nav-links a.active:not(.nav-cta) { color: var(--text); }
+.nav-links a:not(.nav-cta) { position: relative; }
+.nav-links a.active:not(.nav-cta)::after { content: ''; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px; border-radius: 2px; background: var(--accent); }
+.nav-links { gap: 30px; }
+
+#hero::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-image: linear-gradient(rgba(180,190,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(180,190,255,0.035) 1px, transparent 1px);
+  background-size: 56px 56px; -webkit-mask-image: radial-gradient(ellipse at 30% 40%, #000 0%, transparent 70%); mask-image: radial-gradient(ellipse at 30% 40%, #000 0%, transparent 70%); }
+.hero-roles { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-bottom: 26px; opacity: 0; animation: fadeUp 0.7s ease 0.58s forwards; }
+.hero-roles span { font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--soft); padding: 5px 11px; border: 1px solid var(--border2); border-radius: 100px; background: rgba(108,143,255,0.05); }
+.hero-roles i { width: 22px; height: 1px; background: var(--border2); }
+.hero-pillars { padding-top: 28px; border-top: 1px solid var(--border); max-width: 780px; }
+.cert-badge { transition: transform 0.25s, border-color 0.25s; }
+.cert-badge:hover { transform: translateX(-4px); border-color: var(--border2); }
+
+.section-label { display: flex; align-items: center; gap: 12px; }
+.section-label::before { content: ''; width: 24px; height: 1px; background: var(--accent); opacity: 0.7; }
+.section-lead { margin-bottom: 48px; }
+.divider { margin-bottom: 48px; }
+.ico { width: 20px; height: 20px; flex: none; }
+
+/* value cards */
+.value-card h4 { font-size: 13.5px; }
+.value-card h4 .ico { width: 18px; height: 18px; color: var(--accent); }
+.value-card { transition: border-color 0.2s, transform 0.25s; }
+.value-card:hover { transform: translateX(4px); }
+
+/* what I do */
+.what-icon { width: 46px; height: 46px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; border-radius: 11px; color: var(--accent); background: rgba(108,143,255,0.08); border: 1px solid rgba(108,143,255,0.18); }
+.what-icon .ico { width: 22px; height: 22px; }
+.what-card { display: flex; flex-direction: column; }
+.what-card p { flex: 1; }
+.what-card:nth-child(3n+3) .what-icon { color: var(--teal); background: rgba(77,217,192,0.08); border-color: rgba(77,217,192,0.2); }
+.what-card:nth-child(3n+2) .what-icon { color: var(--accent2); background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.2); }
+
+/* skills */
+.tool-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.tool-card { padding: 22px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; transition: border-color 0.25s, transform 0.25s; }
+.tool-card:hover { border-color: var(--border2); transform: translateY(-3px); }
+.tool-card h3 { display: flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 10.5px; font-weight: 500; color: var(--text); text-transform: uppercase; letter-spacing: 1.3px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.tool-card h3 .ico { width: 17px; height: 17px; color: var(--accent); }
+.tchips { display: flex; flex-wrap: wrap; gap: 6px; }
+.tchip { font-size: 12px; color: var(--soft); background: rgba(180,190,255,0.05); border: 1px solid var(--border); padding: 4px 10px; border-radius: 6px; opacity: 0; transform: translateY(6px); transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.2s, color 0.2s; transition-delay: calc(var(--i) * 45ms + 0.2s), calc(var(--i) * 45ms + 0.2s), 0s, 0s; }
+.tool-card.visible .tchip { opacity: 1; transform: none; }
+.tchip:hover { color: var(--accent); border-color: rgba(108,143,255,0.35); }
+.sub-head { margin: 72px 0 28px; }
+.sub-head .section-label { margin-bottom: 8px; }
+.sub-title { font-family: var(--font-serif); font-size: clamp(24px, 3vw, 34px); font-weight: 900; letter-spacing: -0.5px; }
+.str-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.str-card { position: relative; padding: 24px 22px; background: linear-gradient(160deg, var(--card), var(--bg3)); border: 1px solid var(--border); border-radius: 12px; transition: all 0.3s; }
+.str-card:hover { border-color: rgba(108,143,255,0.3); transform: translateY(-4px); box-shadow: 0 18px 40px rgba(0,0,0,0.35); }
+.str-ico { width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 10px; color: var(--gold); background: rgba(232,201,122,0.07); border: 1px solid rgba(232,201,122,0.18); margin-bottom: 16px; }
+.str-ico .ico { width: 19px; height: 19px; }
+.str-card h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+.str-card p { font-size: 12.5px; color: var(--muted); line-height: 1.65; }
+.gdpr-block { display: flex; gap: 20px; align-items: flex-start; margin-top: 40px; padding: 26px 30px; }
+.gdpr-ico { width: 42px; height: 42px; flex: none; display: flex; align-items: center; justify-content: center; border-radius: 10px; color: var(--teal); background: rgba(77,217,192,0.08); border: 1px solid rgba(77,217,192,0.22); }
+.gdpr-ico .ico { width: 21px; height: 21px; }
+
+/* experience / education */
+.exp-card, .edu-card { transition: border-color 0.25s, transform 0.25s; }
+.exp-card:hover, .edu-card:hover { transform: translateY(-3px); }
+.edu-row { grid-template-columns: repeat(6, 1fr); }
+.edu-card { grid-column: span 2; }
+.edu-card.edu-deg-card { grid-column: span 3; padding: 26px; }
+.edu-deg-card .edu-deg { font-size: 18px; }
+
+@media (max-width: 1180px) { .tool-grid, .str-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 960px) {
+  .what-grid { grid-template-columns: 1fr 1fr; }
+  .edu-row { grid-template-columns: 1fr 1fr; }
+  .edu-card, .edu-card.edu-deg-card { grid-column: auto; }
+  .edu-row .edu-card:last-child { grid-column: 1 / -1; }
+  .hero-pillars { padding-top: 24px; }
+}
+@media (max-width: 640px) {
+  .what-grid, .tool-grid, .str-grid, .edu-row { grid-template-columns: 1fr; }
+  .edu-row .edu-card:last-child { grid-column: auto; }
+  .gdpr-block { flex-direction: column; padding: 22px; }
+  .nav-logo { font-size: 15px; }
+}
+@media (prefers-reduced-motion: reduce) { .tchip { opacity: 1; transform: none; } #progress { display: none; } }
 </style>
 </head>
 <body>
 
+<div id="progress"></div>
 <nav>
   <div class="nav-logo">Mrithik Kanti <span>Das</span></div>
   <div class="nav-links">
@@ -242,6 +330,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
     <a href="#what">Expertise</a>
     <a href="#projects">Work</a>
     <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
     <a href="#contact" class="nav-cta">Let's Talk</a>
   </div>
 </nav>
@@ -251,7 +340,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
     <div class="hero-badge">Open to Opportunities · London, UK</div>
     <h1 class="hero-headline">Turning Data Into<br><em>Decisions.</em></h1>
     <p class="hero-sub-name">Mrithik Kanti Das</p>
-    <p class="hero-desc">AI, Generative AI & Data Science professional who <strong>bridges the gap between data complexity and business clarity</strong>. I don't just build models — I understand the problems they need to solve, design systems with integrity, and communicate results that drive real decisions.</p>
+    <div class="hero-roles"><span>AI</span><span>Generative AI</span><span>Data Science</span><i></i><span>Network</span><span>Cloud</span><span>Security</span></div>
+    <p class="hero-desc">AI, Generative AI & Data Science professional with a Network, Cloud & Security IT engineering foundation, who <strong>bridges the gap between data complexity and business clarity</strong>. I don't just build models — I understand the problems they need to solve, design secure systems with integrity, and communicate results that drive real decisions.</p>
     <div class="hero-actions">
       <a href="#projects" class="btn-main">View My Work</a>
       <a href="mailto:mrithikkantidasraz001@gmail.com" class="btn-ghost">Get In Touch</a>
@@ -265,7 +355,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   </div>
   <div class="hero-right">
     <div class="cert-badge"><div class="ct">Generative AI Certification</div><div class="cs">Scyntech Limited · October 2026</div></div>
-    <div class="cert-badge"><div class="ct">IBM Data Analytics</div><div class="cs">Professional Certificate · 2025 – 2026</div></div>
+    <div class="cert-badge"><div class="ct">Data Analytics Professional</div><div class="cs">Future Connect Training · June 2026</div></div>
     <div class="cert-badge"><div class="ct">MSc Computer Science</div><div class="cs">University of Greenwich · 2024</div></div>
   </div>
 </section>
@@ -312,16 +402,17 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   </div>
   <div class="about-grid">
     <div class="about-body reveal">
-      <p>I am an <strong>AI & Data Science professional</strong> with a rare combination of technical depth and human understanding. My foundation is in data — analytics, machine learning, deep learning, and generative AI — but what defines me is how I think about the <em>why</em> behind every piece of work.</p>
-      <p>With a background spanning <strong>university lecturing, technology entrepreneurship, and senior IT leadership</strong>, I have spent years translating technical complexity into decisions that matter. I understand that the value of a model is not in its architecture — it is in the confidence it builds, the problem it solves, and the action it enables.</p>
+      <p>I am an <strong>AI, Generative AI & Data Science professional with a Network, Cloud & Security IT foundation</strong> — a rare combination of technical depth and human understanding. My work spans analytics, machine learning, deep learning and generative AI, and what defines it is how I think about the <em>why</em> behind every piece of work.</p>
+      <p>With a background spanning <strong>network and infrastructure engineering, university lecturing, technology entrepreneurship, and six years of senior IT leadership</strong>, I translate technical complexity into decisions that matter. I build AI the way an infrastructure engineer would: secure, monitored, tested, and deployed so that real people can use it. The value of a model is not in its architecture — it is in the confidence it builds, the problem it solves, and the action it enables.</p>
       <p>I approach every challenge with <strong>genuine curiosity, creative rigour, and deep passion</strong> for the field. I am not someone who applies standard templates — I ask hard questions, challenge assumptions, and design solutions that are both technically sound and genuinely fit for purpose. <em>What I deliver alone reflects what I can lead, multiply, and scale in a team.</em></p>
-      <p>I thrive in <em>new environments and evolving technologies</em>. Whether it is a new domain, an unfamiliar framework, or an emerging field — I adapt quickly, absorb deeply, and contribute from day one. I see technology as a living landscape, and I move with it with confidence and curiosity.</p>
+      <p>I thrive in <em>new environments and evolving technologies</em>. Whether it is a new domain, an unfamiliar framework, or an emerging field — I adapt quickly, absorb deeply, and contribute from day one.</p>
     </div>
     <div class="value-cards reveal d2">
-      <div class="value-card"><h4>🎯 Purpose-Driven</h4><p>Every model I build is anchored to a real outcome — not technical complexity for its own sake. I design with the decision-maker in mind, always.</p></div>
-      <div class="value-card"><h4>🔒 Ethics & Responsibility</h4><p>I believe data professionals carry a responsibility to the people behind the data. Fairness, transparency, and GDPR compliance are not checkboxes — they are commitments built into my work by design.</p></div>
-      <div class="value-card"><h4>💡 Creativity & Innovation</h4><p>My best work emerges from the intersection of deep technical knowledge and creative problem framing. I see patterns others miss and design solutions that are both elegant and effective.</p></div>
-      <div class="value-card"><h4>🤝 Team Multiplier</h4><p>What I deliver independently signals what I bring to a team. I communicate clearly, mentor confidently, and elevate everyone around me.</p></div>
+      <div class="value-card"><h4><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>Purpose-Driven</h4><p>Every model I build is anchored to a real outcome — not technical complexity for its own sake. I design with the decision-maker in mind, always.</p></div>
+      <div class="value-card"><h4><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Secure & Responsible by Design</h4><p>Privacy, security and fairness are commitments built into my work from the start: GDPR Article 25, secret masking, guardrails and explainability.</p></div>
+      <div class="value-card"><h4><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4M12 11.5L6.5 17M12 11.5L17.5 17"/></svg>Network, Cloud & Security Foundation</h4><p>An MSc in Network Engineering and hands-on server, network and cloud deployment experience mean my AI projects are built to run, not just to demo.</p></div>
+      <div class="value-card"><h4><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></svg>Creativity & Innovation</h4><p>My best work emerges from the intersection of deep technical knowledge and creative problem framing — solutions that are both elegant and effective.</p></div>
+      <div class="value-card"><h4><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c2.8 0 4.5 1.9 4.5 5"/></svg>Team Multiplier</h4><p>What I deliver independently signals what I bring to a team. I communicate clearly, mentor confidently, and elevate everyone around me.</p></div>
     </div>
   </div>
 </section>
@@ -330,26 +421,44 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   <div class="reveal">
     <div class="section-label">Areas of Expertise</div>
     <h2 class="section-title">What I Do</h2>
-    <p class="section-lead">I work across the full data intelligence spectrum — from analytical insight to deployed AI systems — always with a focus on responsible, explainable, and business-aligned solutions.</p>
+    <p class="section-lead">I work across the full stack of intelligent systems — from analytical insight and Generative AI to the APIs, cloud deployment and security that keep them running — always with a focus on responsible, explainable, and business-aligned solutions.</p>
   </div>
   <div class="what-grid">
     <div class="what-card reveal">
-      <div class="what-icon">📊</div>
+      <div class="what-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M8 16v-5M13 16V7M18 16v-8"/></svg></div>
       <h3>Data Analysis & Intelligence</h3>
-      <p>Transforming raw data into clear, actionable intelligence. From exploratory analysis and dashboard design to statistical modelling and executive reporting — I make data speak in a language decision-makers understand and act on.</p>
-      <div class="what-tags"><span class="wtag">Python</span><span class="wtag">SQL</span><span class="wtag">Power BI</span><span class="wtag">Tableau</span><span class="wtag">Pandas</span></div>
+      <p>Turning raw data into clear, actionable intelligence: SQL-based refinement, exploratory analysis, dashboards, ETL and executive reporting that decision-makers understand and act on.</p>
+      <div class="what-tags"><span class="wtag">Python</span><span class="wtag">SQL</span><span class="wtag">Power BI</span><span class="wtag">Tableau</span><span class="wtag">Pandas</span><span class="wtag">Excel</span></div>
     </div>
     <div class="what-card reveal d1">
-      <div class="what-icon">🤖</div>
-      <h3>Machine Learning & AI Systems</h3>
-      <p>Designing and deploying production-grade ML models for classification, prediction, anomaly detection, and intelligent automation. I understand both the technical architecture and the business case behind every system I build.</p>
-      <div class="what-tags"><span class="wtag">scikit-learn</span><span class="wtag">TensorFlow</span><span class="wtag">Deep Learning</span><span class="wtag">NLP</span></div>
+      <div class="what-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></div>
+      <h3>Machine Learning & Deep Learning</h3>
+      <p>Designing and evaluating models for classification, forecasting, anomaly detection and computer vision, with explainability (Grad-CAM) and proper cross-validation built in.</p>
+      <div class="what-tags"><span class="wtag">scikit-learn</span><span class="wtag">TensorFlow</span><span class="wtag">XGBoost</span><span class="wtag">LSTM / GRU</span><span class="wtag">CNNs</span><span class="wtag">NLP</span></div>
     </div>
     <div class="what-card reveal d2">
-      <div class="what-icon">✨</div>
+      <div class="what-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3l1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div>
       <h3>Generative AI & RAG</h3>
-      <p>Building intelligent systems powered by large language models — IT helpdesk assistants, document intelligence, AI tutors, business Q&A platforms. I ground Gen AI in real data, verify what it says with code, and keep privacy, compliance, and interpretability in the design.</p>
-      <div class="what-tags"><span class="wtag">Gen AI</span><span class="wtag">LLMs</span><span class="wtag">RAG</span><span class="wtag">Gemini API</span><span class="wtag">Groq</span><span class="wtag">FAISS</span><span class="wtag">HuggingFace</span></div>
+      <p>Building LLM-powered systems — IT helpdesk assistants, document intelligence, AI tutors. I ground Gen AI in real data, verify what it says with code, and keep privacy and interpretability in the design.</p>
+      <div class="what-tags"><span class="wtag">Gen AI</span><span class="wtag">LLMs</span><span class="wtag">RAG</span><span class="wtag">Gemini API</span><span class="wtag">Groq</span><span class="wtag">FAISS</span><span class="wtag">Guardrails</span></div>
+    </div>
+    <div class="what-card reveal">
+      <div class="what-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/></svg></div>
+      <h3>APIs, Apps & PWAs</h3>
+      <p>Building the products around the models: backend services, live-data API integration, and installable progressive web apps and interfaces people can actually use.</p>
+      <div class="what-tags"><span class="wtag">FastAPI</span><span class="wtag">Node.js</span><span class="wtag">React</span><span class="wtag">API Integration</span><span class="wtag">PWA</span><span class="wtag">Streamlit</span><span class="wtag">Git / GitHub</span></div>
+    </div>
+    <div class="what-card reveal d1">
+      <div class="what-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg></div>
+      <h3>Cloud & Deployment</h3>
+      <p>Taking projects from notebook to live: containerised and serverless deployment, hosted demos and continuous updates across several platforms.</p>
+      <div class="what-tags"><span class="wtag">Google Cloud Run</span><span class="wtag">Docker</span><span class="wtag">HuggingFace Spaces</span><span class="wtag">Streamlit Cloud</span><span class="wtag">Netlify</span></div>
+    </div>
+    <div class="what-card reveal d2">
+      <div class="what-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h3>Network, Security & IT Infrastructure</h3>
+      <p>MSc in Network Engineering plus six years running servers, networks and procurement for a 50+ person organisation, with security and privacy designed in: GDPR Article 25, secret masking and adversarial testing.</p>
+      <div class="what-tags"><span class="wtag">Networking</span><span class="wtag">Server Admin</span><span class="wtag">GDPR Art. 25</span><span class="wtag">Privacy by Design</span><span class="wtag">Secret Masking</span><span class="wtag">Adversarial Testing</span></div>
     </div>
   </div>
 </section>
@@ -471,36 +580,36 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   <div class="reveal">
     <div class="section-label">Capabilities</div>
     <h2 class="section-title">Skills & Tools</h2>
-    <div class="divider"></div>
+    <p class="section-lead">The toolkit behind the projects, from data and models to APIs, cloud and security. It matches my CV and LinkedIn line for line.</p>
   </div>
-  <div class="skills-outer">
-    <div class="skills-group reveal">
-      <h3>Technical Proficiency</h3>
-      <div class="skill-item"><div class="skill-row"><span class="skill-name">Data Analysis & Visualisation</span><span class="skill-val">95%</span></div><div class="skill-track"><div class="skill-fill" data-width="95"></div></div></div>
-      <div class="skill-item"><div class="skill-row"><span class="skill-name">Machine Learning (scikit-learn)</span><span class="skill-val">90%</span></div><div class="skill-track"><div class="skill-fill" data-width="90"></div></div></div>
-      <div class="skill-item"><div class="skill-row"><span class="skill-name">Generative AI & LLMs</span><span class="skill-val">88%</span></div><div class="skill-track"><div class="skill-fill" data-width="88"></div></div></div>
-      <div class="skill-item"><div class="skill-row"><span class="skill-name">Deep Learning (TensorFlow)</span><span class="skill-val">85%</span></div><div class="skill-track"><div class="skill-fill" data-width="85"></div></div></div>
-      <div class="skill-item"><div class="skill-row"><span class="skill-name">SQL & Power BI</span><span class="skill-val">82%</span></div><div class="skill-track"><div class="skill-fill" data-width="82"></div></div></div>
-      <div class="skill-item"><div class="skill-row"><span class="skill-name">NLP & RAG Pipelines</span><span class="skill-val">88%</span></div><div class="skill-track"><div class="skill-fill" data-width="88"></div></div></div>
-    </div>
-    <div class="skills-group reveal d2">
-      <h3>Professional Strengths</h3>
-      <div class="soft-chips">
-        <span class="soft-chip">Strategic Thinking</span>
-        <span class="soft-chip">Stakeholder Communication</span>
-        <span class="soft-chip">Technical Leadership</span>
-        <span class="soft-chip">University Lecturing</span>
-        <span class="soft-chip">Entrepreneurship</span>
-        <span class="soft-chip">Rapid Adaptation</span>
-        <span class="soft-chip">Creative Problem Solving</span>
-        <span class="soft-chip">Responsible AI</span>
-        <span class="soft-chip">Explainability Focus</span>
-        <span class="soft-chip">Cross-Domain Curiosity</span>
-      </div>
-    </div>
-    <div class="gdpr-block reveal">
-      <h4>🔒 UK GDPR Compliance — Built In, Not Bolted On</h4>
-      <p>Every system I design adheres to UK GDPR principles: data minimisation, purpose limitation, and privacy by design (Article 25). My British Airways capstone included a full GDPR compliance framework, and SmartDoc AI was architecturally designed to achieve zero data transmission — a practical, working implementation of Article 25. I understand that responsible data handling is not a legal obligation to manage. It is the foundation of trustworthy, durable AI.</p>
+  <div class="tool-grid">
+      <div class="tool-card reveal"><h3><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/></svg>Programming & Querying</h3><div class="tchips"><span class="tchip" style="--i:0">Python</span><span class="tchip" style="--i:1">SQL</span><span class="tchip" style="--i:2">JavaScript (Node.js)</span><span class="tchip" style="--i:3">R</span></div></div>
+      <div class="tool-card reveal d1"><h3><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3l1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>Generative AI & LLM Engineering</h3><div class="tchips"><span class="tchip" style="--i:0">Gemini API</span><span class="tchip" style="--i:1">Groq API</span><span class="tchip" style="--i:2">RAG</span><span class="tchip" style="--i:3">TF-IDF</span><span class="tchip" style="--i:4">FAISS</span><span class="tchip" style="--i:5">Structured-JSON Prompting</span><span class="tchip" style="--i:6">Answer Verification</span><span class="tchip" style="--i:7">Guardrails</span><span class="tchip" style="--i:8">HuggingFace</span></div></div>
+      <div class="tool-card reveal d2"><h3><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg>Machine & Deep Learning</h3><div class="tchips"><span class="tchip" style="--i:0">scikit-learn</span><span class="tchip" style="--i:1">TensorFlow / Keras</span><span class="tchip" style="--i:2">XGBoost</span><span class="tchip" style="--i:3">LSTM / GRU</span><span class="tchip" style="--i:4">CNNs</span><span class="tchip" style="--i:5">Grad-CAM</span><span class="tchip" style="--i:6">NLP</span><span class="tchip" style="--i:7">DBSCAN</span><span class="tchip" style="--i:8">K-Means</span></div></div>
+      <div class="tool-card reveal d3"><h3><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M8 16v-5M13 16V7M18 16v-8"/></svg>Data & Analytics</h3><div class="tchips"><span class="tchip" style="--i:0">Power BI</span><span class="tchip" style="--i:1">Tableau</span><span class="tchip" style="--i:2">Pandas</span><span class="tchip" style="--i:3">NumPy</span><span class="tchip" style="--i:4">Excel</span><span class="tchip" style="--i:5">ETL / ELT</span><span class="tchip" style="--i:6">Data Modelling</span></div></div>
+      <div class="tool-card reveal"><h3><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 15c-1.5 1-2 4-2 6 2 0 5-.5 6-2"/><path d="M12 15l-3-3a14 14 0 0 1 11-9 14 14 0 0 1-8 12z"/><circle cx="15" cy="9" r="1.5"/></svg>APIs, Apps & Testing</h3><div class="tchips"><span class="tchip" style="--i:0">FastAPI</span><span class="tchip" style="--i:1">API Integration</span><span class="tchip" style="--i:2">React</span><span class="tchip" style="--i:3">Vite</span><span class="tchip" style="--i:4">PWAs</span><span class="tchip" style="--i:5">Streamlit</span><span class="tchip" style="--i:6">Gradio</span><span class="tchip" style="--i:7">Adversarial Testing</span><span class="tchip" style="--i:8">Git / GitHub</span></div></div>
+      <div class="tool-card reveal d1"><h3><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>Cloud & Deployment</h3><div class="tchips"><span class="tchip" style="--i:0">Google Cloud Run</span><span class="tchip" style="--i:1">Docker</span><span class="tchip" style="--i:2">HuggingFace Spaces</span><span class="tchip" style="--i:3">Streamlit Cloud</span><span class="tchip" style="--i:4">Netlify</span></div></div>
+      <div class="tool-card reveal d2"><h3><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Security & Governance</h3><div class="tchips"><span class="tchip" style="--i:0">UK GDPR</span><span class="tchip" style="--i:1">Article 25</span><span class="tchip" style="--i:2">Privacy by Design</span><span class="tchip" style="--i:3">Secret Masking</span><span class="tchip" style="--i:4">Compliance Documentation</span></div></div>
+      <div class="tool-card reveal d3"><h3><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg>IT Infrastructure & Networking</h3><div class="tchips"><span class="tchip" style="--i:0">Server Administration</span><span class="tchip" style="--i:1">Networking</span><span class="tchip" style="--i:2">Technology Procurement</span><span class="tchip" style="--i:3">User Support</span></div></div>
+  </div>
+
+  <div class="sub-head reveal"><div class="section-label">What I Bring</div><h3 class="sub-title">Professional Strengths</h3></div>
+  <div class="str-grid">
+      <div class="str-card reveal"><div class="str-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c2.8 0 4.5 1.9 4.5 5"/></svg></div><h4>Technical Leadership</h4><p>Six years running IT for a 50+ person organisation, and co-founded and led a startup's technology division.</p></div>
+      <div class="str-card reveal d1"><div class="str-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 15c-1.5 1-2 4-2 6 2 0 5-.5 6-2"/><path d="M12 15l-3-3a14 14 0 0 1 11-9 14 14 0 0 1-8 12z"/><circle cx="15" cy="9" r="1.5"/></svg></div><h4>End-to-End Delivery</h4><p>From data and model to secure cloud deployment: eight projects, seven of them live.</p></div>
+      <div class="str-card reveal d2"><div class="str-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div><h4>Responsible & Explainable AI</h4><p>Grad-CAM transparency, answer verification and guardrails built in, not bolted on.</p></div>
+      <div class="str-card reveal d3"><div class="str-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div><h4>Security & Privacy by Design</h4><p>GDPR Article 25, secret masking and adversarial testing built into my projects.</p></div>
+      <div class="str-card reveal"><div class="str-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5v4M12 11.5L6.5 17M12 11.5L17.5 17"/></svg></div><h4>Network & Infrastructure Grounding</h4><p>An MSc in Network Engineering plus hands-on server and network administration.</p></div>
+      <div class="str-card reveal d1"><div class="str-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h13"/></svg></div><h4>Stakeholder Communication</h4><p>Dashboards, executive reporting and university lecturing that turn complexity into clear decisions.</p></div>
+      <div class="str-card reveal d2"><div class="str-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg></div><h4>Rapid Adaptation</h4><p>Delivered across financial services, healthcare, civic technology and IT operations.</p></div>
+      <div class="str-card reveal d3"><div class="str-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></svg></div><h4>Entrepreneurial Drive</h4><p>Comfortable owning ambiguity and building from zero, from KitesLab to eight independent projects.</p></div>
+  </div>
+
+  <div class="gdpr-block reveal">
+    <div class="gdpr-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <div>
+      <h4>UK GDPR & Security — Built In, Not Bolted On</h4>
+      <p>I design with UK GDPR principles from the first line: data minimisation, purpose limitation, and privacy by design (Article 25). My British Airways capstone included a full GDPR compliance framework, SmartDoc AI was architected so that no data leaves the user's machine, and OpsPilot masks secrets before any text reaches the model. I treat responsible data handling not as a legal obligation to manage, but as the foundation of trustworthy, durable AI.</p>
     </div>
   </div>
 </section>
@@ -552,12 +661,11 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
     <div class="divider"></div>
   </div>
   <div class="edu-row">
-    <div class="edu-card reveal"><div class="edu-year">2023 – 2024 · LONDON</div><div class="edu-deg">MSc Computer Science (Network Engineering)</div><div class="edu-school">University of Greenwich</div></div>
-    <div class="edu-card reveal d1"><div class="edu-year">2017 – 2022 · DHAKA</div><div class="edu-deg">BSc Computer Science & Engineering</div><div class="edu-school">BRAC University</div></div>
+    <div class="edu-card edu-deg-card reveal"><div class="edu-year">2023 – 2024 · LONDON</div><div class="edu-deg">MSc Computer Science (Network Engineering)</div><div class="edu-school">University of Greenwich</div></div>
+    <div class="edu-card edu-deg-card reveal d1"><div class="edu-year">2017 – 2022 · DHAKA</div><div class="edu-deg">BSc Computer Science & Engineering</div><div class="edu-school">BRAC University</div></div>
     <div class="edu-card reveal d2"><div class="edu-year">OCTOBER 2026</div><div class="edu-deg">Generative AI Certification</div><div class="edu-school">Scyntech Limited</div></div>
     <div class="edu-card reveal"><div class="edu-year">JUNE 2026</div><div class="edu-deg">Data Analytics Professional Certificate</div><div class="edu-school">Future Connect Training</div></div>
     <div class="edu-card reveal d1"><div class="edu-year">MARCH 2026</div><div class="edu-deg">Data Analytics Certificate</div><div class="edu-school">NextLeap Education</div></div>
-    <div class="edu-card reveal d2"><div class="edu-year">2025 – 2026 · IBM</div><div class="edu-deg">IBM Data Analytics Professional Certificate</div><div class="edu-school">IBM</div></div>
   </div>
 </section>
 
@@ -580,7 +688,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 
 <footer>
   <p>© 2026 Mrithik Kanti Das · London, United Kingdom</p>
-  <p>AI, Generative AI & Data Science Professional</p>
+  <p>AI, Generative AI & Data Science · Network, Cloud & Security IT Professional</p>
 </footer>
 
 <script>
@@ -595,6 +703,19 @@ const skillObs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.2 });
 document.querySelectorAll('#skills').forEach(el => skillObs.observe(el));
+
+const prog = document.getElementById('progress'), navEl = document.querySelector('nav');
+function onScroll(){
+  const h = document.documentElement.scrollHeight - innerHeight;
+  prog.style.width = (h > 0 ? scrollY / h * 100 : 0) + '%';
+  navEl.classList.toggle('scrolled', scrollY > 24);
+}
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+const links = [...document.querySelectorAll('.nav-links a[href^="#"]:not(.nav-cta)')];
+const secObs = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id)); });
+}, { rootMargin: '-45% 0px -50% 0px' });
+links.forEach(a => { const t = document.querySelector(a.getAttribute('href')); if (t) secObs.observe(t); });
 </script>
 </body>
 </html>

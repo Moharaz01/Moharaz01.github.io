@@ -3,7 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mrithik Das Raz — AI & Data Science Professional</title>
+<title>Mrithik Kanti Das — AI, Generative AI & Data Science Professional</title>
+<meta name="description" content="AI, Generative AI and Data Science professional in London. 8 AI/ML projects, 7 live: RAG, LLM applications, deep learning, NLP and financial analytics. MSc Computer Science (Network Engineering), University of Greenwich.">
+<meta name="theme-color" content="#08090f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mrithik Kanti Das — AI, Generative AI & Data Science Professional">
+<meta property="og:description" content="8 AI/ML projects, 7 live: RAG, LLM applications, deep learning, NLP and financial analytics. London, UK.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308090f'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%236c8fff' text-anchor='middle'%3EMD%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -156,7 +162,7 @@ section { position: relative; z-index: 1; padding: 100px 64px; }
 
 /* EDUCATION */
 #education { background: var(--bg2); }
-.edu-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.edu-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .edu-card { padding: 22px; background: var(--bg3); border: 1px solid var(--border); border-radius: 10px; }
 .edu-year { font-family: var(--font-mono); font-size: 10px; color: var(--accent); letter-spacing: 1px; margin-bottom: 10px; }
 .edu-deg { font-family: var(--font-serif); font-size: 15px; font-weight: 700; line-height: 1.3; margin-bottom: 6px; }
@@ -177,6 +183,32 @@ section { position: relative; z-index: 1; padding: 100px 64px; }
 footer { padding: 28px 64px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
 footer p { font-size: 12px; color: var(--muted); }
 
+
+/* ACHIEVEMENTS */
+#achievements { background: var(--bg); padding-top: 80px; padding-bottom: 80px; border-top: 1px solid var(--border); }
+.ach-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.ach-card { position: relative; padding: 26px 24px 24px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; transition: all 0.3s; overflow: hidden; }
+.ach-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(to right, var(--gold), transparent); }
+.ach-card:hover { border-color: rgba(232,201,122,0.3); transform: translateY(-4px); box-shadow: 0 20px 44px rgba(0,0,0,0.4); }
+.ach-when { font-family: var(--font-mono); font-size: 10.5px; color: var(--gold); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+.ach-big { font-family: var(--font-serif); font-size: 38px; font-weight: 900; line-height: 1; color: var(--text); margin-bottom: 10px; letter-spacing: -1px; }
+.ach-big em { font-style: normal; color: var(--accent); }
+.ach-card h3 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+.ach-card p { font-size: 12.5px; color: var(--muted); line-height: 1.65; }
+.ach-note { margin-top: 22px; font-size: 11.5px; color: var(--muted); font-family: var(--font-mono); }
+
+/* POLISH */
+section[id] { scroll-margin-top: 64px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+::selection { background: rgba(108,143,255,0.35); color: #fff; }
+@media (max-width: 1180px) { .hero-right { display: none; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0s !important; transition-duration: 0.01ms !important; }
+  .hero-badge, .hero-headline, .hero-sub-name, .hero-desc, .hero-actions, .hero-pillars, .hero-right { opacity: 1; }
+  .reveal { opacity: 1; transform: none; }
+}
+
 /* ANIMATIONS */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -195,14 +227,16 @@ footer p { font-size: 12px; color: var(--muted); }
   .what-grid { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
   .edu-row { grid-template-columns: 1fr 1fr; }
+  .ach-grid { grid-template-columns: 1fr 1fr; }
   footer { flex-direction: column; gap: 8px; text-align: center; }
 }
+@media (max-width: 560px) { .ach-grid, .edu-row { grid-template-columns: 1fr; } .hero-pillars { gap: 24px; } }
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-logo">Mrithik <span>Raz</span></div>
+  <div class="nav-logo">Mrithik Kanti <span>Das</span></div>
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#what">Expertise</a>
@@ -216,23 +250,57 @@ footer p { font-size: 12px; color: var(--muted); }
   <div class="hero-inner">
     <div class="hero-badge">Open to Opportunities · London, UK</div>
     <h1 class="hero-headline">Turning Data Into<br><em>Decisions.</em></h1>
-    <p class="hero-sub-name">Mrithik Das Raz</p>
-    <p class="hero-desc">AI & Data Science professional who <strong>bridges the gap between data complexity and business clarity</strong>. I don't just build models — I understand the problems they need to solve, design systems with integrity, and communicate results that drive real decisions.</p>
+    <p class="hero-sub-name">Mrithik Kanti Das</p>
+    <p class="hero-desc">AI, Generative AI & Data Science professional who <strong>bridges the gap between data complexity and business clarity</strong>. I don't just build models — I understand the problems they need to solve, design systems with integrity, and communicate results that drive real decisions.</p>
     <div class="hero-actions">
       <a href="#projects" class="btn-main">View My Work</a>
       <a href="mailto:mrithikkantidasraz001@gmail.com" class="btn-ghost">Get In Touch</a>
     </div>
     <div class="hero-pillars">
-      <div class="pillar"><div class="pillar-num">8</div><div class="pillar-label">Live AI Projects</div></div>
+      <div class="pillar"><div class="pillar-num">8</div><div class="pillar-label">AI/ML Projects · 7 Live</div></div>
+      <div class="pillar"><div class="pillar-num">Gen AI</div><div class="pillar-label">RAG & LLM Applications</div></div>
       <div class="pillar"><div class="pillar-num">0.97</div><div class="pillar-label">Best AUC Score</div></div>
-      <div class="pillar"><div class="pillar-num">100%</div><div class="pillar-label">GDPR Compliant</div></div>
-      <div class="pillar"><div class="pillar-num">3+</div><div class="pillar-label">Years Leadership</div></div>
+      <div class="pillar"><div class="pillar-num">6</div><div class="pillar-label">Years Leading IT</div></div>
     </div>
   </div>
   <div class="hero-right">
-    <div class="cert-badge"><div class="ct">IBM Data Analytics</div><div class="cs">Professional Certificate · 2026</div></div>
-    <div class="cert-badge"><div class="ct">IBM Gen AI</div><div class="cs">Professional Certificate · In Progress</div></div>
+    <div class="cert-badge"><div class="ct">Generative AI Certification</div><div class="cs">Scyntech Limited · October 2026</div></div>
+    <div class="cert-badge"><div class="ct">IBM Data Analytics</div><div class="cs">Professional Certificate · 2025 – 2026</div></div>
     <div class="cert-badge"><div class="ct">MSc Computer Science</div><div class="cs">University of Greenwich · 2024</div></div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="reveal">
+    <div class="section-label">Milestones</div>
+    <h2 class="section-title">Recent Achievements</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="ach-grid">
+    <div class="ach-card reveal">
+      <div class="ach-when">October 2026</div>
+      <div class="ach-big">Gen <em>AI</em></div>
+      <h3>Generative AI Certification</h3>
+      <p>Awarded by Scyntech Limited, adding formal credentials to hands-on RAG and LLM work.</p>
+    </div>
+    <div class="ach-card reveal d1">
+      <div class="ach-when">Latest project</div>
+      <div class="ach-big">328</div>
+      <h3>Tests behind OpsPilot</h3>
+      <p>A live Gen AI helpdesk assistant with about 175 deliberate-breakage tests; 0 unsafe misses and 0 secret leaks in my own evaluation.</p>
+    </div>
+    <div class="ach-card reveal d2">
+      <div class="ach-when">Portfolio</div>
+      <div class="ach-big">8 <em>/</em> 7</div>
+      <h3>Projects built, 7 live</h3>
+      <p>Independently designed and deployed across Gen AI, RAG, NLP, deep learning and financial analytics.</p>
+    </div>
+    <div class="ach-card reveal d3">
+      <div class="ach-when">2026</div>
+      <div class="ach-big">3</div>
+      <h3>Certificates in one year</h3>
+      <p>Data Analytics (NextLeap, March), Data Analytics Professional (Future Connect, June) and Generative AI (Scyntech, October).</p>
+    </div>
   </div>
 </section>
 
@@ -269,7 +337,7 @@ footer p { font-size: 12px; color: var(--muted); }
       <div class="what-icon">📊</div>
       <h3>Data Analysis & Intelligence</h3>
       <p>Transforming raw data into clear, actionable intelligence. From exploratory analysis and dashboard design to statistical modelling and executive reporting — I make data speak in a language decision-makers understand and act on.</p>
-      <div class="what-tags"><span class="wtag">Python</span><span class="wtag">SQL</span><span class="wtag">Power BI</span><span class="wtag">Pandas</span><span class="wtag">Plotly</span></div>
+      <div class="what-tags"><span class="wtag">Python</span><span class="wtag">SQL</span><span class="wtag">Power BI</span><span class="wtag">Tableau</span><span class="wtag">Pandas</span></div>
     </div>
     <div class="what-card reveal d1">
       <div class="what-icon">🤖</div>
@@ -280,8 +348,8 @@ footer p { font-size: 12px; color: var(--muted); }
     <div class="what-card reveal d2">
       <div class="what-icon">✨</div>
       <h3>Generative AI & RAG</h3>
-      <p>Building intelligent systems powered by large language models — document intelligence, AI tutors, business Q&A platforms. I ground GenAI in real data while maintaining privacy, compliance, and interpretability.</p>
-      <div class="what-tags"><span class="wtag">LLMs</span><span class="wtag">RAG</span><span class="wtag">LangChain</span><span class="wtag">FAISS</span><span class="wtag">HuggingFace</span></div>
+      <p>Building intelligent systems powered by large language models — IT helpdesk assistants, document intelligence, AI tutors, business Q&A platforms. I ground Gen AI in real data, verify what it says with code, and keep privacy, compliance, and interpretability in the design.</p>
+      <div class="what-tags"><span class="wtag">Gen AI</span><span class="wtag">LLMs</span><span class="wtag">RAG</span><span class="wtag">Gemini API</span><span class="wtag">Groq</span><span class="wtag">FAISS</span><span class="wtag">HuggingFace</span></div>
     </div>
   </div>
 </section>
@@ -290,15 +358,24 @@ footer p { font-size: 12px; color: var(--muted); }
   <div class="reveal">
     <div class="section-label">Selected Work</div>
     <h2 class="section-title">Projects That Solve Problems</h2>
-    <p class="section-lead">Eight production-grade AI and Data Science systems — all live. Each one started with a real problem, not a dataset.</p>
+    <p class="section-lead">Eight production-grade AI and Data Science projects, seven of them live, plus one extra experiment on GitHub. Each one started with a real problem, not a dataset.</p>
   </div>
   <div class="projects-grid">
 
     <div class="proj-card reveal">
+      <div class="proj-header"><div class="proj-name">OpsPilot</div><span class="proj-badge badge-live">● Live</span></div>
+      <div class="proj-problem">Problem: IT teams drown in repeat tickets, messy data and phishing emails, and plain chatbots can invent fixes.</div>
+      <p class="proj-desc">An AI assistant for IT helpdesk, data and phishing, built on one rule: code decides, the AI explains, code verifies. Every cited fix is checked word for word against a 30-article knowledge base, otherwise it becomes a ticket. Secrets are masked before text reaches the model, every number in AI output is matched to a computed fact, and Phish Lab uses 23 warning-sign detectors and never labels an email safe.</p>
+      <div class="proj-metric"><span class="metric-chip">328 Tests</span><span class="metric-chip">~175 Breakage Tests</span><span class="metric-chip">0 Unsafe Misses · 0 Secret Leaks (own live evaluation)</span></div>
+      <div class="proj-stack"><span class="stack-tag">Node.js</span><span class="stack-tag">Gemini API</span><span class="stack-tag">TF-IDF Retrieval</span><span class="stack-tag">PWA</span><span class="stack-tag">Google Cloud Run</span></div>
+      <div class="proj-links"><a href="https://opspilot-mdr-live.ai.studio/" target="_blank" class="plink">↗ Live App</a></div>
+    </div>
+
+    <div class="proj-card reveal d1">
       <div class="proj-header"><div class="proj-name">UK Life For People</div><span class="proj-badge badge-live">● Live</span></div>
       <div class="proj-problem">Problem: People moving, renting or visiting UK areas have no single place to understand crime, rent and local services.</div>
       <p class="proj-desc">A UK living intelligence platform — live crime rates by postcode via UK Police API, and Local Housing Allowance rental data across 15 cities. Built for everyone navigating life in the UK.</p>
-      <div class="proj-metric"><span class="metric-chip">Live UK Police API</span><span class="metric-chip">15 UK Cities</span><span class="metric-chip">GDPR Compliant</span></div>
+      <div class="proj-metric"><span class="metric-chip">Live UK Police API</span><span class="metric-chip">15 UK Cities</span><span class="metric-chip">Open Public Data</span></div>
       <div class="proj-stack"><span class="stack-tag">React</span><span class="stack-tag">Vite</span><span class="stack-tag">UK Police API</span><span class="stack-tag">Netlify</span></div>
       <div class="proj-links"><a href="https://uklifeforpeople.netlify.app" target="_blank" class="plink">↗ Live App</a><a href="https://github.com/Moharaz01/uk-living-intelligence" target="_blank" class="plink">↗ GitHub</a></div>
     </div>
@@ -323,7 +400,7 @@ footer p { font-size: 12px; color: var(--muted); }
     <div class="proj-card reveal">
       <div class="proj-header"><div class="proj-name">PneumoNet AI</div><span class="proj-badge badge-live">● Live</span></div>
       <div class="proj-problem">Problem: Pneumonia misdiagnosis causes preventable harm — AI can augment and support clinical decision-making.</div>
-      <p class="proj-desc">Deep learning chest X-ray classifier built on MobileNetV2 with Grad-CAM explainability — making AI decisions transparent and clinically interpretable. Built with responsible AI at its core.</p>
+      <p class="proj-desc">Deep learning chest X-ray classifier built on MobileNetV2 with Grad-CAM explainability — making AI decisions transparent and clinically interpretable. Built with responsible AI at its core. A demonstration project, not a medical device.</p>
       <div class="proj-metric"><span class="metric-chip">92.4% Accuracy</span><span class="metric-chip">0.971 AUC</span><span class="metric-chip">94.7% Sensitivity</span></div>
       <div class="proj-stack"><span class="stack-tag">TensorFlow</span><span class="stack-tag">MobileNetV2</span><span class="stack-tag">Grad-CAM</span><span class="stack-tag">Streamlit</span></div>
       <div class="proj-links"><a href="https://huggingface.co/spaces/Moharaz/pneumonet-ai" target="_blank" class="plink">↗ Live App</a><a href="https://github.com/Moharaz01/pneumonet-ai" target="_blank" class="plink">↗ GitHub</a></div>
@@ -334,7 +411,7 @@ footer p { font-size: 12px; color: var(--muted); }
       <div class="proj-problem">Problem: Cloud-based document AI creates serious privacy risks for organisations handling sensitive data.</div>
       <p class="proj-desc">100% locally-processed RAG document intelligence. GDPR Article 25 compliant by architectural design — zero data leaves the user's machine. Privacy is not a feature here; it is the foundation.</p>
       <div class="proj-metric"><span class="metric-chip">100% Local</span><span class="metric-chip">GDPR Article 25</span></div>
-      <div class="proj-stack"><span class="stack-tag">HuggingFace</span><span class="stack-tag">FAISS</span><span class="stack-tag">LangChain</span><span class="stack-tag">RoBERTa</span></div>
+      <div class="proj-stack"><span class="stack-tag">HuggingFace</span><span class="stack-tag">FAISS</span><span class="stack-tag">sentence-transformers</span><span class="stack-tag">Streamlit</span></div>
       <div class="proj-links"><a href="https://huggingface.co/spaces/Moharaz/smartdoc-ai" target="_blank" class="plink">↗ Live App</a><a href="https://github.com/Moharaz01/smartdoc-ai" target="_blank" class="plink">↗ GitHub</a></div>
     </div>
 
@@ -359,8 +436,8 @@ footer p { font-size: 12px; color: var(--muted); }
     <div class="proj-card reveal">
       <div class="proj-header"><div class="proj-name">UK Scam Detector</div><span class="proj-badge badge-github">GitHub</span></div>
       <div class="proj-problem">Problem: SMS fraud costs UK consumers millions annually — a lightweight, interpretable classifier can help protect everyday people.</div>
-      <p class="proj-desc">Naive Bayes NLP text classifier detecting SMS scam messages targeting UK users. TF-IDF unigram and bigram vectorization identifies urgency language, financial lures, and deceptive linguistic patterns.</p>
-      <div class="proj-metric"><span class="metric-chip">100% Test Accuracy</span><span class="metric-chip">TF-IDF Bigrams</span></div>
+      <p class="proj-desc">Naive Bayes NLP text classifier detecting SMS scam messages targeting UK users. TF-IDF unigram and bigram vectorization identifies urgency language, financial lures, and deceptive linguistic patterns. A prototype: its perfect score comes from a small test set.</p>
+      <div class="proj-metric"><span class="metric-chip">100% on a Small Test Set</span><span class="metric-chip">TF-IDF Bigrams</span></div>
       <div class="proj-stack"><span class="stack-tag">Python</span><span class="stack-tag">scikit-learn</span><span class="stack-tag">NLP</span><span class="stack-tag">TF-IDF</span></div>
       <div class="proj-links"><a href="https://github.com/Moharaz01/uk-scam-message-detector" target="_blank" class="plink">↗ GitHub</a></div>
     </div>
@@ -436,28 +513,34 @@ footer p { font-size: 12px; color: var(--muted); }
   </div>
   <div class="exp-grid">
     <div class="exp-card reveal">
+      <div class="exp-period">JUN 2025 – JUL 2026 · LONDON, UK</div>
+      <div class="exp-role">Data Analyst Trainee</div>
+      <div class="exp-org">IT Skills</div>
+      <p class="exp-desc">Improved data accuracy by 30% through SQL-based dataset refinement and segmentation, delivering reliable insights for strategic decisions. Carried out market analysis of online and offline business models, and structured more than 10,000 customer reviews in Excel (Pivot Tables, IFERROR, INDEX/MATCH) for cross-analysis.</p>
+    </div>
+    <div class="exp-card reveal d1">
       <div class="exp-period">2017 – 2023 · DHAKA, BANGLADESH</div>
       <div class="exp-role">Chief IT Engineer</div>
       <div class="exp-org">Moon's Film and Media</div>
-      <p class="exp-desc">Owned end-to-end IT infrastructure — server administration, network systems, and technology strategy. Applied data-driven thinking to operational decisions, developing a deep instinct for how technology serves business outcomes rather than existing as an end in itself.</p>
+      <p class="exp-desc">Owned end-to-end IT infrastructure for a media organisation of 50+ staff — server administration, network systems, and technology procurement. Applied data-driven thinking to operational decisions, reducing infrastructure downtime and developing a deep instinct for how technology serves business outcomes rather than existing as an end in itself.</p>
     </div>
-    <div class="exp-card reveal d1">
+    <div class="exp-card reveal">
       <div class="exp-period">2021 – 2023 · DHAKA, BANGLADESH</div>
       <div class="exp-role">Contractual Lecturer, Dept. of IT</div>
       <div class="exp-org">BRAC University</div>
       <p class="exp-desc">Delivered Computer Science and IT lectures to undergraduate students. Designed curriculum materials and assessment frameworks — developing the rare ability to explain complex technical concepts with precision, clarity, and adaptability to audiences at every level.</p>
     </div>
-    <div class="exp-card reveal">
+    <div class="exp-card reveal d1">
       <div class="exp-period">2012 – 2016 · DHAKA, BANGLADESH</div>
       <div class="exp-role">Chief Founding Officer</div>
       <div class="exp-org">KitesLab Technology Startup</div>
       <p class="exp-desc">Co-founded and led the technology division of a startup from inception. Drove strategic direction, system architecture, and team leadership under high ambiguity — a formative experience in decision-making, innovation under constraint, and building with purpose.</p>
     </div>
-    <div class="exp-card reveal d1">
+    <div class="exp-card reveal">
       <div class="exp-period">2023 – PRESENT · LONDON, UK</div>
       <div class="exp-role">AI & Data Science Professional</div>
       <div class="exp-org">Independent Portfolio Work</div>
-      <p class="exp-desc">Independently conceptualised, built, and deployed seven production-grade AI and Data Science systems across NLP, deep learning, RAG, financial analytics, and generative AI. Each project demonstrates initiative, technical depth, and the ability to deliver complete, usable solutions from idea to deployment.</p>
+      <p class="exp-desc">Independently conceptualised, built, and deployed eight AI and Data Science projects, seven of them live, across Generative AI, RAG, NLP, deep learning, and financial analytics. Each project demonstrates initiative, technical depth, and the ability to deliver complete, usable solutions from idea to deployment.</p>
     </div>
   </div>
 </section>
@@ -471,8 +554,10 @@ footer p { font-size: 12px; color: var(--muted); }
   <div class="edu-row">
     <div class="edu-card reveal"><div class="edu-year">2023 – 2024 · LONDON</div><div class="edu-deg">MSc Computer Science (Network Engineering)</div><div class="edu-school">University of Greenwich</div></div>
     <div class="edu-card reveal d1"><div class="edu-year">2017 – 2022 · DHAKA</div><div class="edu-deg">BSc Computer Science & Engineering</div><div class="edu-school">BRAC University</div></div>
-    <div class="edu-card reveal d2"><div class="edu-year">2025 – 2026 · IBM</div><div class="edu-deg">IBM Data Analytics Professional Certificate</div><div class="edu-school">Next Leap · Completing</div></div>
-    <div class="edu-card reveal d3"><div class="edu-year">IN PROGRESS · IBM</div><div class="edu-deg">IBM Gen AI Professional Certificate</div><div class="edu-school">Expected May 2026</div></div>
+    <div class="edu-card reveal d2"><div class="edu-year">OCTOBER 2026</div><div class="edu-deg">Generative AI Certification</div><div class="edu-school">Scyntech Limited</div></div>
+    <div class="edu-card reveal"><div class="edu-year">JUNE 2026</div><div class="edu-deg">Data Analytics Professional Certificate</div><div class="edu-school">Future Connect Training</div></div>
+    <div class="edu-card reveal d1"><div class="edu-year">MARCH 2026</div><div class="edu-deg">Data Analytics Certificate</div><div class="edu-school">NextLeap Education</div></div>
+    <div class="edu-card reveal d2"><div class="edu-year">2025 – 2026 · IBM</div><div class="edu-deg">IBM Data Analytics Professional Certificate</div><div class="edu-school">IBM</div></div>
   </div>
 </section>
 
@@ -494,8 +579,8 @@ footer p { font-size: 12px; color: var(--muted); }
 </section>
 
 <footer>
-  <p>© 2026 Mrithik Das Raz · London, United Kingdom</p>
-  <p>AI & Data Science Professional</p>
+  <p>© 2026 Mrithik Kanti Das · London, United Kingdom</p>
+  <p>AI, Generative AI & Data Science Professional</p>
 </footer>
 
 <script>
